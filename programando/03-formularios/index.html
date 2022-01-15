@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+
+        <form>
+            <input type="text " placeholder="Nombre" v-model.trim="datos.name " />
+
+            <input type="number" v-model.number="datos.age" min="15" max="100" />
+            <hr>
+            <h2>Lenguajes favoritos</h2>
+            
+            <div >
+            <input type="checkbox" value="js"  id="js" v-model="datos.langs"> 
+            <label for="js">Javascript</label>
+
+            <input type="checkbox" value="php" id="php " v-model="datos.langs">
+            <label for="php">PHP</label>
+
+            <input type="checkbox" value="vue js" id="vue " v-model="datos.langs">
+            <label for="vue">Vue js</label>
+            </div>
+            
+        </form>
+
+       <p>{{datos}}</p>
+    </div>
+
+    <style> 
+    label{
+        color: #000;
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+    body{
+        background-color: #000000;
+    } 
+        #app{
+            width: 30%;
+            margin: 0 auto;
+            text-align: center;
+            background-color: rgb(44, 206, 15);
+            padding: 20px;
+            margin-top: 70px;
+        }
+        form input{
+            width: 100%;
+            
+            border: none;
+            background-color: rgb(28, 211, 171);
+            color: rgb(255, 251, 0);
+            font-size: 20px;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    </style>
+    
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+</body>
+</html>
